@@ -1,0 +1,31 @@
+{% include 'bases/_header.html.twig' %}
+
+<main>
+
+    <form action="{{ path('authors_bio') }}" method="get" class="searchauthor">
+        {# Input de type search pour lancer des recherches...#}
+        <label for="site-search">Rechercher parmi les bio des auteurs</label>
+        <input type="search" name="word" id="inputsearchauthorsbybio" aria-label="Search through author's bio">
+        <button type="submit">Recherche</button>
+        {#Fin de l'input#}
+    </form>
+
+    <section class="authorList">
+
+        {% for author in authors %}
+
+            <div class="oneAuthor">
+                <a href="{{ path('author_show', {'id' : author.id}) }}">
+                    <h1>Auteur : {{ author.firstName }} {{ author.lastName }}</h1>
+                    <h3>Naissance : {{ author.birthDate|date('d/m/Y') }}</h3>
+                    <h3>Mort : {{ author.deathDate|date('d/m/Y') }}</h3>
+                    <p>Bio : {{ author.bio }}</p>
+                </a>
+            </div>
+
+        {% endfor %}
+    </section>
+
+</main>
+
+{% include 'bases/_footer.html.twig' %}

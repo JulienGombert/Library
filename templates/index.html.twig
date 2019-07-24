@@ -1,0 +1,53 @@
+{% include 'bases/_header.html.twig' %}
+
+
+
+<main>
+
+    <section class="authorList">
+
+        <h1 class="titre">Les 2 derniers auteurs de la librairie</h1>
+
+
+        {% for author in authors %}
+
+            <div class="oneAuthor">
+                <a href="{{ path('author_show', {'id' : author.id}) }}">
+                    <h1>Auteur : {{ author.firstName }} {{ author.lastName }}</h1>
+                    <h3>Naissance : {{ author.birthDate|date('d/m/Y') }}</h3>
+                    <h3>Mort : {{ author.deathDate|date('d/m/Y') }}</h3>
+                    <p>Bio : {{ author.bio }}</p>
+                </a>
+            </div>
+
+        {% endfor %}
+    </section>
+
+    <section class="bookList">
+
+        <h1 class="titre">Les 2 derniers livres de la librairie</h1>
+
+        {% for book in books %}
+
+            <div class="oneBook">
+                <a href="{{ path('book_show', {'id' : book.id}) }}">
+                    <h1>Titre du livre : {{ book.title }}</h1>
+
+                    {% if book.author %}
+                        <h2>{{ book.author.firstName }} {{ book.author.lastName }}</h2>
+                    {% endif %}
+
+                    <h2>Genre : {{ book.genre }}</h2>
+                    <h3>{{ book.numberpages }} pages</h3>
+                    <p>Résumé : {{ book.resume }}</p>
+                </a>
+            </div>
+
+        {% endfor %}
+
+    </section>
+
+</main>
+
+
+{% include 'bases/_footer.html.twig' %}

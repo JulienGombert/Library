@@ -1,0 +1,33 @@
+{% include 'bases/_header.html.twig' %}
+
+    <main>
+
+        <form action="{{ path('books_resume') }}" method="get" class="searchbook">
+            {# Input de type search pour lancer des recherches...#}
+            <label class="searchbook" for="site-search">Rechercher parmi les résumés des livres</label>
+            <input class="searchbook" type="search" name="word" id="inputsearchbookbyresume" aria-label="Search through author's bio">
+            <button type="submit" class="searchbook">Recherche</button>
+            {#Fin de l'input#}
+        </form>
+
+        <section class="bookList">
+
+            <h1 class="titre">Les livres de la librairie</h1>
+
+        {% for book in books %}
+
+            <div class="oneBook">
+                <a href="{{ path('book_show', {'id' : book.id}) }}">
+                    <h1>Titre du livre : {{ book.title }}</h1>
+                    <h2>Genre : {{ book.genre }}</h2>
+                    <h3>{{ book.numberpages }} pages</h3>
+                    <p>Résumé : {{ book.resume|raw }}</p>
+                </a>
+            </div>
+
+        {% endfor %}
+        </section>
+
+    </main>
+
+{% include 'bases/_footer.html.twig' %}

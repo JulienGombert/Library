@@ -1,0 +1,49 @@
+{% include 'bases/_header.html.twig' %}
+
+
+<main>
+
+    <section class="adminInsert">
+
+        {{ form_start(formBook) }}
+
+
+        {{ form_label(formBook.title, 'Titre du livre :', {'label_attr': {'class': 'adminLabel'}}) }}
+        {{ form_widget(formBook.title, {'attr': {'class': 'input'}}) }}
+
+        <br />
+
+        {{ form_label(formBook.genre, 'Genre :', {'label_attr': {'class': 'adminLabel'}}) }}
+        {{ form_widget(formBook.genre, {'attr': {'class': 'input'}}) }}
+
+        <br />
+
+        {{ form_label(formBook.numberpages, 'Nombre de pages :', {'label_attr': {'class': 'adminLabel'}}) }}
+        {{ form_widget(formBook.numberpages, {'attr': {'class': 'input'}}) }}
+
+        <br />
+
+
+        {{ form_label(formBook.resume, 'Biographie', {'label_attr': {'class': 'adminLabel'}}) }}
+        <br />
+        {{ form_widget(formBook.resume, {'attr': {'class': 'adminTextArea'}}) }}
+
+        <br />
+
+        {{ form_label(formBook.author, 'Nombre de pages :', {'label_attr': {'class': 'adminLabel'}}) }}
+        {{ form_widget(formBook.author, {'attr': {'class': 'input'}}) }}
+
+        <br />
+
+
+        {{ form_widget(formBook.enregistrer, {'attr': {'class': 'submit'}}) }}
+
+
+        {{ form_end(formBook) }}
+
+    </section>
+
+</main>
+
+
+{% include 'bases/_footer.html.twig' %}

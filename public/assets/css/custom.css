@@ -1,0 +1,414 @@
+*{
+    box-sizing: border-box;
+}
+
+
+/*___________________________*/
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+/*    font-size: 100%;
+    font: inherit;*/
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/*___________________________*/
+
+
+body{
+    background-color: yellow;
+    /*background-image: url("https://images2.minutemediacdn.com/image/upload/c_fill,g_auto,h_1248,w_2220/f_auto,q_auto,w_1100/v1554741904/shape/mentalfloss/559404-istock-512966920_0.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;*/
+}
+
+h1{
+    font-size: 1.5em;
+    color:#092DF1;
+}
+
+h2{
+    font-size: 1.2em;
+    color:yellow;
+}
+
+h3{
+    font-size: 1.1em;
+    color: #FFBC3F;
+}
+
+p{
+    color: #F9F871;
+}
+
+a:link, a:visited, a:active{
+    color : #7ef93f;
+    text-decoration: none;
+}
+
+a:hover {
+    color : #4245a4;
+    text-decoration: none;
+}
+
+
+/* CSS pour la page books.html.twig */
+
+.bookList{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.oneBook {
+    width: 45%;
+    border: solid 3px #FF724C;
+    border-radius: 25px;
+    padding: 30px;
+    margin: 20px 0;
+    line-height: 30px;
+    background-color: #DE00BA;
+}
+
+/*CSS pour la page book.html.twig*/
+.showOneBook{
+    width: 60%;
+    margin: 0 auto;
+}
+
+.onlyOneBook {
+    width: 100%;
+    border: solid 3px #FF724C;
+    border-radius: 25px;
+    padding: 30px;
+    margin: 20px 0;
+    line-height: 30px;
+    background-color: #DE00BA;
+    text-align: center;
+}
+
+/* CSS pour la page authors.html.twig */
+
+.authorList{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.oneAuthor {
+    width: 45%;
+    border: solid 3px #FF724C;
+    border-radius: 25px;
+    padding: 30px;
+    margin: 20px 0;
+    line-height: 30px;
+    background-color: #DE00BA;
+}
+
+/*CSS pour la page author.html.twig*/
+.showOneAuthor{
+    width: 60%;
+    margin: 0 auto;
+}
+
+.onlyOneAuthor {
+    width: 100%;
+    border: solid 3px #FF724C;
+    border-radius: 25px;
+    padding: 30px;
+    margin: 20px 0;
+    line-height: 30px;
+    background-color: #DE00BA;
+    text-align: center;
+}
+
+/*Titres pages*/
+.titre {
+    text-align: center;
+    font-size: 3em;
+    letter-spacing: .2em;
+    margin: 20px auto;
+    color: #FF007C;
+    font-weight: 600;
+}
+
+
+/* Search input*/
+.searchauthor, .searchbook {
+    width: 80%;
+    margin: 20px auto;
+    text-align: right;
+    color : #DE00BA;
+}
+
+button{
+
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border: solid 1px lightgray;
+    border-radius: 5px;
+}
+
+
+/*CSS footer*/
+.footerLibrary{
+    background-color: #FF007C;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+
+/*CSS header*/
+.headerLibrary{
+    background-color: #ff007c;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.photoLibrary{
+    height: 100px;
+}
+
+.headerMenu{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+}
+
+.links {
+    margin: 0 30px;
+    height: 100px;
+    font-size: 2em;
+    color :#FFBC3F;
+}
+
+
+main{
+    min-height: calc(100vh - 150px);
+}
+
+/* CSS contact */
+.contactLibrary {
+    width: 50%;
+    /*height: 500px;*/
+    margin: 50px auto;
+    background-color: #ff007c;
+    padding-top : 50px;
+    text-align: center;
+}
+
+.h1contactLibrary{
+    padding-top : 15px;
+}
+
+.h2contactLibrary{
+    padding-top : 10px;
+}
+
+.pcontactLibrary{
+    padding-top : 5px;
+}
+
+.homeForMobile{
+    display: none;
+}
+
+
+/*CSS des formulaires*/
+.adminInsert, .adminUpdate {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+.input {
+    width: 200px;
+
+}
+
+.adminLabel {
+    color : #586eff;
+    height: 50px;
+    line-height: 50px;
+}
+
+.adminTextArea {
+    width: 300px;
+    height: 300px;
+}
+
+.adminDate {
+    text-align: center;
+    width: 50%;
+}
+
+
+.submit {
+    width: 100px;
+
+    /*width: 50%;*/
+    margin: 20px 0;
+}
+
+
+/*CSS Admin*/
+
+.adminText {
+    text-align: center;
+    padding: 20px;
+    color: #092DF1;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+
+.adminChoice {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: solid 1px black;
+    width: 80%;
+    margin: 0 auto;
+    background-color: #DE00BA;
+    flex-wrap: wrap;
+}
+
+.adminAuthorsBlock, .adminBooksBlock {
+    width: 45%;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+.adminAuthors, .adminBooks {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.adminAuthorList {
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+
+/* Media queries */
+@media screen and (min-width: 200px) and (max-width: 640px) {
+
+    .oneAuthor, .oneBook, .onlyOneAuthor, .onlyOneBook{
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .showOneBook, .showOneAuthor{
+        width: 90%;
+    }
+
+    .photoLibrary {
+        display: none;
+    }
+
+    /* Search input*/
+    .searchauthor, .searchbook {
+       /* background-color: #ff007c;*/
+    }
+
+    #inputsearchauthorsbybio, #inputsearchbookbyresume {
+        background-color: #ff007c;
+    }
+
+    .links {
+        margin: 0 10px;
+        height: 100px;
+        font-size: 1.5em;
+        color :#FFBC3F;
+    }
+
+    .authorList, .bookList {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .homeForMobile {
+        display: block;
+        margin: 0 10px;
+        height: 100px;
+        font-size: 1.5em;
+        color : #FFBC3F;
+    }
+
+    .titre {
+        font-size: 1.3em;
+        margin: 20px auto;
+        color: #FF007C;
+        font-weight: 800;
+    }
+
+    h1{
+        font-size: 1.2em;
+        color:#092DF1;
+    }
+
+    h2{
+        font-size: 1em;
+        color:yellow;
+    }
+
+    h3{
+        font-size: 0.9em;
+        color: #FFBC3F;
+    }
+
+}
+
+
+
+

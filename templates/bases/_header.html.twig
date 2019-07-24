@@ -1,0 +1,53 @@
+<!doctype html>
+
+<html lang="fr_FR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Happy library</title>
+
+    <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
+</head>
+
+<body>
+
+    <header class="headerLibrary">
+
+
+        <a class="photoLibrary" href="{{ path('index') }}">
+            <img class="photoLibrary" src="https://magnolia-portugal.dunegestion.com/w4/php/dune/file.php?file=40325_livraria_lello_2.jpg&hash=5bf1455446" alt="La photo représente notre librairie apèrs sa rénovation">
+        </a>
+
+        <a class="homeForMobile" href="{{ path('index') }}">Home</a>
+
+
+        <ul class="headerMenu">
+
+
+            <a href="{{ path('authors_bio') }}">
+                <li class="links">Auteurs</li>
+            </a>
+
+            <a href="{{ path('books_resume') }}">
+                <li class="links">Livres</li>
+            </a>
+
+            <a href="{{ path('contact') }}">
+                <li class="links">Contact</li>
+            </a>
+
+        </ul>
+
+   {#     <form action="{{ path('authors_bio', 'book_resume') }}" method="get" class="searchauthor">
+            #}{# Input de type search pour lancer des recherches...#}{#
+            <label for="site-search">Rechercher dans bio auteurs ou résumé livres</label>
+            <input type="search" name="word" id="inputsearchauthorsbybio" aria-label="Search through author's bio">
+            <button type="submit">Recherche</button>
+            #}{#Fin de l'input#}
+        </form>
+
+
+    </header>

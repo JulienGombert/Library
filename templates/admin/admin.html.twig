@@ -1,0 +1,37 @@
+{% include 'bases/_header.html.twig' %}
+
+
+<main>
+
+    <h1 class="adminText">Vous êtes sur la page admin de votre librairie préférée</h1>
+
+    <h2 class="adminText">Vous souhaiter ajouter ou modifier un auteur ou un livre</h2>
+
+    <h3 class="adminText">Merci de cliquer sur les lien ci-dessous</h3>
+
+
+
+    <div class="adminChoice">
+
+        <div class="adminText adminAuthorsBlock">Les auteurs
+            <a class="adminAuthors" href="{{ path('admin_author_form_insert') }}">
+                Ajout d'un auteur
+            </a>
+            <a class="adminAuthors" href="{{ path('admin_author_list') }}">
+                Modifier un auteur
+            </a>
+        </div>
+
+        <div class="adminText adminBooksBlock">Les livres
+            <a class="adminBooks" href="{{ path('admin_books_form_insert') }}">
+                Ajout d'un auteur
+            </a>
+            <a class="adminBooks" href="{{ path('admin_book_list') }}">
+                Modifier un livre
+            </a>
+        </div>
+    </div>
+
+</main>
+
+{% include 'bases/_footer.html.twig' %}

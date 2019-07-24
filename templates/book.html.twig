@@ -1,0 +1,28 @@
+{% include 'bases/_header.html.twig' %}
+
+<main>
+
+    <section class="showOneBook">
+
+        <h1 class="titre">Le livre sélectionné</h1>
+
+            <div class="onlyOneBook">
+                <h1>Titre du livre : {{ book.title }}</h1>
+
+                {% if book.author %}
+                    <h2>{{ book.author.firstName }} {{ book.author.lastName }}</h2>
+                {% endif %}
+
+                <h2>Genre : {{ book.genre }}</h2>
+                <h3>{{ book.numberpages }} pages</h3>
+                <p>Résumé : {{ book.resume|raw }}</p>
+                <br>
+
+                <a href="{{ path('book_list') }}">Retour</a>
+            </div>
+
+    </section>
+
+</main>
+
+{% include 'bases/_footer.html.twig' %}

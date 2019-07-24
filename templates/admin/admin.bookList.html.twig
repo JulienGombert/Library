@@ -1,0 +1,29 @@
+{% include '/bases/_header.html.twig' %}
+
+
+<main>
+
+    <section class="adminBookList">
+
+        {% for book in books %}
+
+            <h1 class="adminBookList">{{ book.title }}
+                <a class="" href="{{ path('admin_book_form_update', {'id': book.id}) }}"">  Modifier  </a>
+                <a class="" href="{{ path('book_delete', {'id': book.id}) }}">  Supprimer  </a>
+            </h1>
+
+            {#{% for book in author.books %}
+                {{ book.title }}
+                <br>
+            {% endfor %}#}
+
+            <hr>
+        {% endfor %}
+
+
+
+    </section>
+
+</main>
+
+{% include'/bases/_footer.html.twig' %}

@@ -1,0 +1,25 @@
+{% include 'bases/_header.html.twig' %}
+
+<main>
+
+    <section class="bookList">
+
+        <h1 class="titre">Les livres de la librairie du genre : {{ type }}</h1>
+
+        {% for book in books %}
+
+            <div class="oneBook">
+                <a href="{{ path('book_show', {'id' : book.id}) }}">
+                    <h1>Titre du livre : {{ book.title }}</h1>
+                    <h2>Genre : {{ book.genre }}</h2>
+                    <h3>{{ book.numberpages }} pages</h3>
+                    <p>Résumé : {{ book.resume|raw }}</p>
+                </a>
+            </div>
+
+        {% endfor %}
+    </section>
+
+</main>
+
+{% include 'bases/_footer.html.twig' %}

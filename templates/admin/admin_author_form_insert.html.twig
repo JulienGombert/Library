@@ -1,0 +1,52 @@
+{% include 'bases/_header.html.twig' %}
+
+<main>
+
+    <section class="adminInsert">
+
+        {{ form_start(formAuthor) }}
+
+
+            {{ form_label(formAuthor.lastName, 'Nom de l\'auteur :', {'label_attr': {'class': 'adminLabel'}}) }}
+            {{ form_widget(formAuthor.lastName, {'attr': {'class': 'input'}}) }}
+
+            <br />
+
+            {{ form_label(formAuthor.firstName, 'Prénom de l\'auteur :', {'label_attr': {'class': 'adminLabel'}}) }}
+            {{ form_widget(formAuthor.firstName, {'attr': {'class': 'input'}}) }}
+
+            <br />
+
+{#
+            {{ form_label(formAuthor.birthdate, 'Date de naissance', {'label_attr': {'class': 'totolabel'}}) }}
+#}
+            <p class="adminLabel">Date de naissance : </p>
+            {{ form_widget(formAuthor.birthDate, {'attr': {'class': 'adminDate'}}) }}
+
+            <br />
+{#
+            {{ form_label(formAuthor.deathDate, 'Date de décès', {'label_attr': {'class': 'totolabel'}}) }}
+#}
+            <p class="adminLabel">Date de décès : </p>
+            {{ form_widget(formAuthor.deathDate, {'attr': {'class': 'adminDate'}}) }}
+
+            <br />
+
+            {{ form_label(formAuthor.firstName, 'Biographie', {'label_attr': {'class': 'adminLabel'}}) }}
+            <br />
+            {{ form_widget(formAuthor.bio, {'attr': {'class': 'adminTextArea'}}) }}
+
+            <br />
+
+
+            {{ form_widget(formAuthor.enregistrer, {'attr': {'class': 'submit'}}) }}
+
+
+        {{ form_end(formAuthor) }}
+
+    </section>
+
+</main>
+
+
+{% include 'bases/_footer.html.twig' %}

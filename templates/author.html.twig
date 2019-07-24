@@ -1,0 +1,27 @@
+{% include 'bases/_header.html.twig' %}
+
+
+<main>
+
+    <section class="showOneAuthor">
+
+        <h1 class="titre">L'auteur sélectionné</h1>
+
+        <div class="onlyOneAuthor">
+
+            <h1>Auteur : {{ author.firstName }} {{ author.lastName }}</h1>
+            <h3>Naissance : {{ author.birthDate|date('d/m/Y') }}</h3>
+            <h3>Mort : {{ author.deathDate|date('d/m/Y') }}</h3>
+            <p>Bio : {{ author.bio }}</p>
+
+            <br>
+
+            <a href="{{ path('author_list') }}">Retour</a>
+
+        </div>
+
+    </section>
+
+</main>
+
+{% include 'bases/_footer.html.twig' %}
